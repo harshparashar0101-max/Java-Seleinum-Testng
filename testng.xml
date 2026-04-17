@@ -4,6 +4,7 @@
     <test name="GoogleTest">
         <classes>
             <class name="com.test.GoogleTest"/>
+            <class name="com.test.LoginTest"/>
         </classes>
     </test>
 </suite>

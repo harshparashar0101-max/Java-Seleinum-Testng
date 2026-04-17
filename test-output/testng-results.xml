@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-17T12:38:05 IST" name="Default suite" finished-at="2026-04-17T12:38:16 IST" duration-ms="10939">
+  <suite started-at="2026-04-17T15:56:16 IST" name="Default suite" finished-at="2026-04-17T15:56:21 IST" duration-ms="5313">
     <groups>
     </groups>
-    <test started-at="2026-04-17T12:38:05 IST" name="Default test" finished-at="2026-04-17T12:38:16 IST" duration-ms="10939">
+    <test started-at="2026-04-17T15:56:16 IST" name="Default test" finished-at="2026-04-17T15:56:21 IST" duration-ms="5313">
       <class name="com.test.GoogleTest">
-        <test-method signature="verifyGoogleTitle()[pri:0, instance:com.test.GoogleTest@5b8dfcc1]" started-at="2026-04-17T12:38:05 IST" name="verifyGoogleTitle" finished-at="2026-04-17T12:38:16 IST" duration-ms="10846" status="PASS">
+        <test-method signature="verifyGoogleTitle()[pri:0, instance:com.test.GoogleTest@42a48628]" started-at="2026-04-17T15:56:16 IST" name="verifyGoogleTitle" finished-at="2026-04-17T15:56:21 IST" duration-ms="5236" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyGoogleTitle -->

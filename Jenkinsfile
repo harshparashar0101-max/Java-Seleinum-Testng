@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         XRAY_BASE_URL = 'https://xray.cloud.getxray.app'
-        TEST_EXEC_KEY = 'PUT_TEST_EXECUTION_KEY_HERE'
+        TEST_EXEC_KEY = 'LOGI-70'
     }
 
     stages {
@@ -43,7 +43,7 @@ pipeline {
 
                 curl -H "Authorization: Bearer %XRAY_TOKEN%" ^
                      -F "file=@target/surefire-reports/testng-results.xml" ^
-                     "%XRAY_BASE_URL%/api/v2/import/execution/testng?testExecKey=LOGI-70"
+                     "%XRAY_BASE_URL%/api/v2/import/execution/testng?testExecKey=%TEST_EXEC_KEY%"
                 '''
             }
         }

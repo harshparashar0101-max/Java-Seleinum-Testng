@@ -1,0 +1,4 @@
+{
+  "com.test.GoogleTest#verifyGoogleTitle": "LOGI-18",
+  "com.test.LoginTest#verifyLogin": "LOGI-80"
+}

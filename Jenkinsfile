@@ -34,19 +34,26 @@ pipeline {
                 }
             }
         }
+        
+        stage('Check Xray File') {
+    steps {
+        bat 'dir test-output'
+    }
+}
 
         stage('Upload Results to Xray') {
-            steps {
-                bat '''
-                set /p XRAY_TOKEN=<xray_token.txt
-                set XRAY_TOKEN=%XRAY_TOKEN:"=%
+    steps {
+        bat '''
+        set /p XRAY_TOKEN=<xray_token.txt
+        set XRAY_TOKEN=%XRAY_TOKEN:"=%
 
-                curl -H "Authorization: Bearer %XRAY_TOKEN%" ^
-                     -F "file=@target/surefire-reports/testng-results.xml" ^
-                     "%XRAY_BASE_URL%/api/v2/import/execution/testng?testExecKey=%TEST_EXEC_KEY%"
-                '''
-            }
-        }
+        curl -H "Content-Type: text/xml" ^
+             -H "Authorization: Bearer %XRAY_TOKEN%" ^
+             --data @test-output/testng-results.xml ^
+             "https://xray.cloud.getxray.app/api/v2/import/execution/testng?testExecKey=LOGI-70"
+        '''
+    }
+    }
     }
 
     post {
